@@ -1,8 +1,8 @@
 #!/bin/bash
 
 ID=$(id centos)
-DATE=$(df -h)
+SPACE CHECK=$(df -h)
 
 echo "${ID}"
-echo "current date and time is ===${DATE}==="
+echo "${SPACE CHECK}"
 
