@@ -1,7 +1,7 @@
 #!/bin/bash
 
-CLIENT=Suresh
-VENDOR=Ramesh
+CLIENT=Danske Bank
+VENDOR=Infosys
 
 
 
