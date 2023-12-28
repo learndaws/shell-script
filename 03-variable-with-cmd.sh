@@ -1,8 +1,8 @@
 #!/bin/bash
 
 ID=$(id centos)
-SPACE-CHECK=$(df -h)
+SPACECHECK=$(df -h)
 
 echo "${ID}"
-echo "${SPACE-CHECK}"
+echo "${SPACECHECK}"
 
