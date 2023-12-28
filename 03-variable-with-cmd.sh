@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ID=$(id centos)
-DATE=$(date)
+DATE=$(pwd)
 
 echo "${ID}"
 echo "current date and time is ===${DATE}==="
