@@ -4,5 +4,5 @@ ID=$(id centos)
 DATE=$(date)
 
 echo "$ID"
-echo "current date and time is "$DATE""
+echo "current date and time is ===$DATE==="
 
