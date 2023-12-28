@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CLIENT=Danske Bank
+CLIENT=Danske-Bank
 VENDOR=Infosys
 
 
