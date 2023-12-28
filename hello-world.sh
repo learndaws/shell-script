@@ -1,2 +1,2 @@
 #!/bin/bash
-echo ""[DHey, what's up?"
+echo "Hey, what's up"
