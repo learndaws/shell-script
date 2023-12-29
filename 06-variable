@@ -2,10 +2,10 @@
 
 echo "username:"
 
-read username
+read -s
 
 echo "password:"
 
-read -s password
+read -s
 
 
