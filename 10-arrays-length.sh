@@ -1,7 +1,7 @@
 #!/bin/bash
 
-my_array=("item1" "item2" "item3" "item4")
+FRUITS=("ORANGE" "GRAPES" "APPLE")
 
-array_length=${#my_array[@]}
+array_length=${#FRUITS[@]}
 
 echo "The length of the array is: $array_length"
