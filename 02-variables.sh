@@ -6,6 +6,8 @@ VENDOR=Infosys
 VENDOR=TCS
 VENDOR=WIPRO
 
+VENDOR=LAST
+
 
 echo "$VENDOR: Hi $CLIENT, How are you?"
 echo "$CLIENT: Hey $VENDOR, What's up"
