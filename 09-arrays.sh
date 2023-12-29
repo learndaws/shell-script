@@ -8,4 +8,4 @@ echo "Third Value: ${FRUITS[2]}"
 
 echo "ALL FRUITS: ${FRUITS[@]}"
 
-echo $#FRUITS
+count $FRUITS
