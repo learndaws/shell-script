@@ -7,5 +7,3 @@ echo "Second Value: ${FRUITS[1]}"
 echo "Third Value: ${FRUITS[2]}"
 
 echo "ALL FRUITS: ${FRUITS[@]}"
-
-count $FRUITS
