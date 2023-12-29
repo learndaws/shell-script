@@ -4,8 +4,6 @@ echo "username:"
 
 read username
 
-echo "$username"
-
 echo "password:"
 
 read -s password
