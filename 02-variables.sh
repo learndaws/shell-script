@@ -1,6 +1,7 @@
 #!/bin/bash
 
 CLIENT=Danske-Bank
+VENDOR=HCL
 VENDOR=Infosys
 VENDOR=TCS
 VENDOR=WIPRO
