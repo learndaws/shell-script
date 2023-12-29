@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FRUITS=("ORANGE" "GRAPES" "APPLE")
+FRUITS=("ORANGE" "GRAPES" "APPLE" "JACK-FRUIT")
 
 array_length=${#FRUITS[@]}
 
