@@ -6,3 +6,5 @@ SPACECHECK=$(df -h)
 echo "${ID}"
 echo "${SPACECHECK}"
 
+echo "${SPACECHECK}+${ID}"
+
