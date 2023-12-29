@@ -3,7 +3,7 @@
 CLIENT=Danske-Bank
 VENDOR=Infosys
 VENDOR=TCS
-
+VENDOR=WIPRO
 
 
 echo "$VENDOR: Hi $CLIENT, How are you?"
