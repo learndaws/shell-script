@@ -1,11 +1,21 @@
 #!/bin/bash
 
-echo "username:"
+echo "username: "
+
+read USERNAME
+
+echo "password: "
+
+read PASSWORD
+
+echo "username is $USERNAME and password is $PASSWORD"
+
+#--------------------
+
+echo "username: "
 
 read -s
 
-echo "password:"
+echo "password: "
 
 read -s
-
-
