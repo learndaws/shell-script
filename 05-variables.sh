@@ -2,4 +2,6 @@
 
 id centos
 
+ID=$(id centos)
+
 
