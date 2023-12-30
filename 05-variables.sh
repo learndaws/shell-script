@@ -1,5 +1,5 @@
 #!/bin/bash
 
-echo "$(id centos)"
+id centos
 
 
