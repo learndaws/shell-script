@@ -2,7 +2,7 @@
 
 ROOTACCESSCHECK=$(id -u)
 
-if [ $ROOTACCESSCHECK -eq 1000 ]
+if [ $ROOTACCESSCHECK -ne 0 ]
 then
-echo "you have normal access"
+echo "you don't have root access to run the script"
 fi
