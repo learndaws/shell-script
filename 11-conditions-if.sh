@@ -2,7 +2,7 @@
 
 NUMERICAL=$1
 
-if ($NUMBERICAL -gt 100) {
+if ($NUMERICAL -gt 100) {
     echo "$NUMERICAL is grater than 100"
 }
 else {
