@@ -1,10 +1,10 @@
 #!/bin/bash
 
-NUMERICAL-=$1
+NUMERICAL=$1
 
-if ($NUMBERICAL -gt 100){
+if ($NUMBERICAL -gt 100) {
     echo "$NUMERICAL is grater than 100"
 }
-else{
+else {
     echo "$NUMERICAL is less than 100"
 }
