@@ -2,7 +2,7 @@
 
 ROOTACCESSCHECK=$(id -u)
 
-if [ $ROOTACCESSCHECK -ne 2 ]
+if [ $ROOTACCESSCHECK eq 1000 ]
 then
-echo "run the script with root access user"
+echo "you have normal access"
 fi
