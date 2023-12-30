@@ -8,9 +8,7 @@ echo "you don't have root access to run the script"
 exit 1
 fi
 
-PRGM1=$1
-
-yum install $PRGM -y
+yum install git -y
 
 if [ $? -ne 0 ]
 then
