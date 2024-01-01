@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for i in {1..5}
+for PRINT_1-TO-5 in {1..5}
 do
-    echo "Number: ${i}"
+    echo "Number: ${PRINT_1-TO-5}"
 done
