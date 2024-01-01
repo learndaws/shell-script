@@ -2,31 +2,25 @@
 
 ROOTACCESSCHECK=$(id -u)
 
-if [ $ROOTACCESSCHECK != 0 ];
-    then
-        echo "FAILURE-1: you don't have root access to run the script"
-        exit 1
-    else
-        echo "SUCCESS-1: you have root access"
-fi
-
 
 EXIT_CHECK() 
 {
     if [ $1 != 0 ];
         then
-            echo "FAILURE-2: $2 installation failed"
+            echo "FAILURE-2: $2 failed"
             exit 1
         else
-            echo "SUCCESS-2: $2 installation success"
+            echo "SUCCESS-2: $2 success"
 fi
 }
+
+EXIT_CHECK "$ROOTACCESSCHECK" "root access"
 
 
 yum install mysql -y
 
-EXIT_CHECK "$?" "Mysql"
+EXIT_CHECK "$?" "Mysql installation"
 
 
 yum install git -y
-EXIT_CHECK "$?" "git"
+EXIT_CHECK "$?" "git installation"
