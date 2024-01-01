@@ -12,20 +12,20 @@ EXIT_CHECK()
 {
     if [ $1 != 0 ];
         then
-            echo "$2"
+            echo "$2"  &>> ${LOG}
             exit 1
         else
-            echo "$3"
+            echo "$3"  &>> ${LOG}
 fi
 }
 
 EXIT_CHECK "$ROOTACCESSCHECK" "FAILURE-1: you don't have root access" "SUCCESS-1: you have root access"
 
 
-yum install mysql -y &>> ${LOG}
+yum install mysql -y
 
 EXIT_CHECK "$?" "FAILURE-2: Mysql installation is failed" "SUCCESS-2: Mysql installation is success"
 
 
-yum install git -y &>> ${LOG}
+yum install git -y
 EXIT_CHECK "$?" "FAILURE-3: git installation is failed" "SUCCESS-3: git installation is success"
