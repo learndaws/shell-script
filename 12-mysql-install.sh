@@ -10,7 +10,7 @@ if [ $ROOTACCESSCHECK != 0 ];
         echo "SUCCESS-1: you have root access"
 fi
 
-yum install mysql -y
+yum install mysqlas -y
 
 if [ $? != 0 ];
     then
