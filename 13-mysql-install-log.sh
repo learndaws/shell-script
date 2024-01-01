@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ROOTACCESSCHECK=$(id -u) &>> ${LOG}
+ROOTACCESSCHECK=$(id -u)
 
 
 DATE=$(date +%F)
