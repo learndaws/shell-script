@@ -10,22 +10,23 @@ if [ $ROOTACCESSCHECK != 0 ];
         echo "SUCCESS-1: you have root access"
 fi
 
+
+EXIT_CHECK() 
+{
+    if [ $1 != 0 ];
+        then
+            echo "FAILURE-2: $2 installation failed"
+            exit 1
+        else
+            echo "SUCCESS-2: $2 installation success"
+fi
+}
+
+
 yum install mysql -y
 
-if [ $? != 0 ];
-    then
-        echo "FAILURE-2: Mysql installation failed"
-        exit 1
-    else
-        echo "SUCCESS-2: Mysql installation success"
-fi
+EXIT_CHECK "$?" "Mysql"
+
 
 yum install git -y
-
-if [ $? != 0 ];
-    then
-        echo "FAILURE-3: git installation failed"
-        exit 1
-    else
-        echo "SUCCESS-3: git installation success"
-fi
+EXIT_CHECK "$?" "git"
