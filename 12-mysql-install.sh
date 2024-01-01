@@ -17,7 +17,7 @@ fi
 EXIT_CHECK "$ROOTACCESSCHECK" "you don't have root access" "you have root access"
 
 
-yum install myql -y
+yum install mysql -y
 
 EXIT_CHECK "$?" "Mysql installation is failed" "Mysql installation is success"
 
