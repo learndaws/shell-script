@@ -5,7 +5,7 @@ ROOTACCESSCHECK=$(id -u)
 
 DATE=$(date +%F)
 
-LOG="Jenkins_intall_${DATE}.log"
+LOG="/tmp/Jenkins_intall_${DATE}.log"  #even this also can be done LOG="/tmp/$0-${DATE}.log".. $0 shows the name of the file
 
 
 EXIT_CHECK() 
