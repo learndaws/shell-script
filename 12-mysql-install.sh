@@ -7,10 +7,10 @@ EXIT_CHECK()
 {
     if [ $1 != 0 ];
         then
-            echo "FAILURE-2: $2"
+            echo "FAILURE-2: $3"
             exit 1
         else
-            echo "SUCCESS-2: $3"
+            echo "SUCCESS-2: $2"
 fi
 }
 
