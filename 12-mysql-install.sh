@@ -23,7 +23,7 @@ fi
 }
 
 
-yum install mysql -y
+yum installll mysql -y
 
 EXIT_CHECK "$?" "Mysql"
 
