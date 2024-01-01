@@ -28,5 +28,5 @@ yum install mysql -y
 EXIT_CHECK "$?" "Mysql"
 
 
-yum installas git -y
+yum install git -y
 EXIT_CHECK "$?" "git"
