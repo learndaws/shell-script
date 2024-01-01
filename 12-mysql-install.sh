@@ -23,10 +23,10 @@ fi
 }
 
 
-yum installll mysql -y
+yum install mysql -y
 
 EXIT_CHECK "$?" "Mysql"
 
 
-yum install git -y
+yum installas git -y
 EXIT_CHECK "$?" "git"
