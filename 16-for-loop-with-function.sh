@@ -8,4 +8,4 @@ do
 done
 }
 
-FUNCTION $1
+FUNCTION 5
