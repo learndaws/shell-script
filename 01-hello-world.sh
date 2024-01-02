@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Hey, what's up"
+echo "Hello, I'm learning DAWS"
