@@ -8,5 +8,4 @@ do
 done
 }
 
-FUNCTION
-FUNCTION
+FUNCTION $1
