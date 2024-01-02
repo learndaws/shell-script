@@ -8,5 +8,4 @@ do
 done
 }
 
-echo "Number: ${PRINT_1TO5}"
-echo "Number: ${PRINT_1TO5}"
+FUNCTION
