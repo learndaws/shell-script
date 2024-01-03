@@ -17,10 +17,10 @@ VALIDATE()
 {
    if [ $1 != 0 ];
 then
-    echo -e "$2"
+    echo -e "$2" &>> ${LOG}
     exit 1
 else
-    echo -e "$3"
+    echo -e "$3" &>> ${LOG}
 fi 
 }
 
@@ -34,7 +34,7 @@ SOFTWARE_INSTALL()
         yum install $2 -y
         VALIDATE "$?" "${R} $SOFTWARE install failed ${N}" "${G} $SOFTWARE install success ${N}"
     else
-        echo -e "${Y} $3 ${N}"
+        echo -e "${Y} $3 ${N}" &>> ${LOG}
     fi 
 }
 
