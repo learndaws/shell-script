@@ -9,7 +9,6 @@ N="\e[0m"
 
 CH_SUDO_XS=$(id -u)
 
-
 VALIDATE()
 {
    if [ $1 != 0 ];
@@ -21,20 +20,21 @@ else
 fi 
 }
 
-
 VALIDATE "${CH_SUDO_XS}" "${R} FAILURE-1: You don't have sudo access ${N}" "${G} SUCCESS-1: You have sudo access ${N}"
+
+
+SOFTWARE_INSTALL()
+{
+   if [ $1 != 0 ];
+    then
+        yum install $2
+    else
+        echo -e "$3"
+    fi 
+}
 
 for SOFTWARE in $@
 do 
     yum list installed ${SOFTWARE}
-        if [ $? != 0 ];
-        then
-            yum install ${SOFTWARE} -y
-                if [ $? != 0 ];
-                then 
-                    echo -e "${R}  FAILURE: ${SOFTWARE} installation failed ${N}"
-                else 
-                    echo -e "${G}  SUCCESS: ${SOFTWARE} installation success ${N}"
-                fi
-        fi     
+    VALIDATE "$?" "${SOFTWARE}" "${SOFTWARE} is already installed"
 done
