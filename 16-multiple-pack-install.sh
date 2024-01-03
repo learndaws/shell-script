@@ -6,6 +6,10 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+DATE=$(date +%F)
+
+LOG="/tmp/$0-${DATE}.log"
+
 
 CH_SUDO_XS=$(id -u)
 
