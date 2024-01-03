@@ -29,7 +29,7 @@ do
     yum list installed ${SOFTWARE}
         if [ $? != 0 ];
         then
-            yum install ${SOFTWARE}
+            yum install ${SOFTWARE} -y
                 if [ $? != 0 ];
                 then 
                     echo "${SOFTWARE} installation failed"
