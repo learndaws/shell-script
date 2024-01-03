@@ -30,7 +30,7 @@ SOFTWARE_INSTALL()
         yum install $2 -y
         VALIDATE "$?" "${R} $SOFTWARE install failed ${N}" "${G} $SOFTWARE install success ${N}"
     else
-        echo -e "$3"
+        echo -e "${Y} $3 ${N}"
     fi 
 }
 
