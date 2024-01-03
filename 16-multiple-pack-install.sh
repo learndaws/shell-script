@@ -12,7 +12,7 @@ CH_SUDO_XS=$(id -u)
 
 VALIDATE()
 {
-   if [ $1 != 0 ]
+   if [ $1 != 0 ];
 then
     echo -e "$2"
     exit 1
@@ -24,9 +24,17 @@ fi
 
 VALIDATE "${CH_SUDO_XS}" "${R} FAILURE-1: You don't have sudo access ${N}" "${G} SUCCESS-1: You have sudo access ${N}"
 
-for INSTALLATION_LOOP in $@
+for SOFTWARE in $@
 do 
-    yum list installed ${INSTALLATION_LOOP}
-    VALIDATE "$?" "${R} FAILURE: ${INSTALLATION_LOOP} is not stalled ${N}" "${G} SUCCESS: ${INSTALLATION_LOOP} is already stalled ${N}"
+    yum list installed ${SOFTWARE}
+        if [ $? != 0 ];
+        then
+            yum install ${SOFTWARE}
+                if [ $? != 0 ];
+                then 
+                    echo "${SOFTWARE} installation failed"
+                else 
+                    echo "${SOFTWARE} installation success"
+                fi
+        fi     
 done
-
