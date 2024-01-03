@@ -32,9 +32,9 @@ do
             yum install ${SOFTWARE} -y
                 if [ $? != 0 ];
                 then 
-                    echo "${SOFTWARE} installation failed"
+                    echo "${R}  ${SOFTWARE} installation failed ${N}"
                 else 
-                    echo "${SOFTWARE} installation success"
+                    echo "${G}  ${SOFTWARE} installation success ${N}"
                 fi
         fi     
 done
