@@ -1,5 +1,11 @@
 #!/bin/bash
 
+B="\e[30m"
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
+
 
 CH_SUDO_XS=$(id -u)
 
@@ -15,10 +21,10 @@ fi
 }
 
 
-VALIDATE "${CH_SUDO_XS}" "You don't have sudo access" "You have sudo access"
+VALIDATE "${CH_SUDO_XS}" "${R} FAILURE-1: You don't have sudo access ${N}" "${G} SUCCESS-1: You have sudo access ${N}"
 
 
 yum install git -y
 
-VALIDATE "$?" "git installation failed" "git installation successful"
+VALIDATE "$?" "${R} FAILURE-2: git installation failed ${N}" "${G} SUCCESS-2: git installation successful ${N}"
 
