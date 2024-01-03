@@ -17,10 +17,10 @@ VALIDATE()
 {
    if [ $1 != 0 ];
 then
-    echo -e "$2" &>> ${LOG}
+    echo -e "$2"
     exit 1
 else
-    echo -e "$3" &>> ${LOG}
+    echo -e "$3"
 fi 
 }
 
@@ -31,15 +31,15 @@ SOFTWARE_INSTALL()
 {
    if [ $1 != 0 ];
     then
-        yum install $2 -y
+        yum install $2 -y &>> ${LOG}
         VALIDATE "$?" "${R} $SOFTWARE install failed ${N}" "${G} $SOFTWARE install success ${N}"
     else
-        echo -e "${Y} $3 ${N}" &>> ${LOG}
+        echo -e "${Y} $3 ${N}"
     fi 
 }
 
 for SOFTWARE in $@
 do 
-    yum list installed ${SOFTWARE}
+    yum list installed ${SOFTWARE}  &>> ${LOG}
     SOFTWARE_INSTALL "$?" "${SOFTWARE}" "${SOFTWARE} is already installed"
 done
