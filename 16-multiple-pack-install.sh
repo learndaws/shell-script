@@ -36,5 +36,5 @@ SOFTWARE_INSTALL()
 for SOFTWARE in $@
 do 
     yum list installed ${SOFTWARE}
-    VALIDATE "$?" "${SOFTWARE}" "${SOFTWARE} is already installed"
+    SOFTWARE_INSTALL "$?" "${SOFTWARE}" "${SOFTWARE} is already installed"
 done
