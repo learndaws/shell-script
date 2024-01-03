@@ -15,7 +15,6 @@ VALIDATE()
    if [ $1 != 0 ]
 then
     echo -e "$2"
-    exit 2
 else
     echo -e "$3"
 fi 
