@@ -27,6 +27,6 @@ VALIDATE "${CH_SUDO_XS}" "${R} FAILURE-1: You don't have sudo access ${N}" "${G}
 for INSTALLATION_LOOP in $@
 do 
     yum list installed ${INSTALLATION_LOOP}
-    VALIDATE "$?" "${R} FAILURE: ${INSTALLATION_LOOP} is not stalled ${N}" "${G} ${INSTALLATION_LOOP} is already stalled ${N}"
+    VALIDATE "$?" "${R} FAILURE: ${INSTALLATION_LOOP} is not stalled ${N}" "${G} SUCCESS: ${INSTALLATION_LOOP} is already stalled ${N}"
 done
 
