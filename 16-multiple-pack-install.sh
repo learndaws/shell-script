@@ -14,9 +14,9 @@ VALIDATE()
 {
    if [ $1 != 0 ]
 then
-    echo "$2"
+    echo -e "$2"
 else
-    echo "$3"
+    echo -e "$3"
 fi 
 }
 
