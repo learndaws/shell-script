@@ -24,8 +24,9 @@ fi
 
 VALIDATE "${CH_SUDO_XS}" "${R} FAILURE-1: You don't have sudo access ${N}" "${G} SUCCESS-1: You have sudo access ${N}"
 
-
-yum install git -y
-
-VALIDATE "$?" "${R} FAILURE-2: git installation failed ${N}" "${G} SUCCESS-2: git installation successful ${N}"
+for INSTALLATION_LOOP in $@
+do 
+    yum list installed ${INSTALLATION_LOOP}
+    VALIDATE "$?" "${R} ${INSTALLATION_LOOP} is not stalled ${N}" "${G} ${INSTALLATION_LOOP} is already stalled ${N}"
+done
 
