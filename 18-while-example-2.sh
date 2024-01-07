@@ -4,7 +4,7 @@ INPUT_FILE=$(cat /etc/passwd)
 
 while IFS=':' read -r user_name password user_id group_id GECOS home_dir shell
 do 
-    echo "username: $user_name" &>> file.log
+    echo "username: $user_name"
     echo "password: $password" 
     echo "user-id: $user_id"
     echo "group-id: $group_id" 
