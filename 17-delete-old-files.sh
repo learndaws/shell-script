@@ -5,10 +5,9 @@ FILE_PATH="/tmp/shell-scripts"
 if [ ! -d $FILE_PATH ]
 then
     echo "file doesn't exist"
-    exit 1
 fi
 
-FILE_TO_DELETE=$(find $FILE_PATH -type f -mtime +10 -name "*.log")
+FILE_TO_DELETE=$(find $FILE_PATH -type f -mtime +10 -name "*.sh")
 
 while IFS= read -r line
 do 
