@@ -1,12 +1,17 @@
 #!/bin/bash
 
-FILE_PATH="/tmp/file-1.log"
+FILE_PATH="/tmp/shell-scripts"
 
-if [ ! -f ${FILE_PATH} ];
+if [ ! -d ${FILE_PATH} ];
 then
     echo "file doesn't exist"
-else 
-    rm ${FILE_PATH}
 fi
+
+FILES_TO_DELETE="$(find $FILE_PATH -type f -mtime +10 -name "*.sh")"
+
+while IFS= read -r line
+do 
+    echo "Deleting file: $line"
+done
 
 
