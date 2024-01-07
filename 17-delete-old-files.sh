@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILE_PATH="/tmp/shell-scripts/"
+FILE_PATH="/tmp/shell-scripts"
 
 if [ ! -d $FILE_PATH ]
 then
