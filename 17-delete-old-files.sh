@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILE_PATH=$(/tmp/file-1.log)
+FILE_PATH=$(id centos)
 
 echo "${FILE_PATH}"
 
