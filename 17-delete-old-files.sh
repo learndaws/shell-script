@@ -7,7 +7,7 @@ then
     echo "file doesn't exist"
 fi
 
-FILE_TO_DELETE=$(find $FILE_PATH -type f -mtime +10 -name "*.j*")
+FILE_TO_DELETE=$(find $FILE_PATH -type f -mtime +10 -name "*.js")
 
 while IFS= read -r line
 do 
