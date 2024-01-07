@@ -12,6 +12,6 @@ FILES_TO_DELETE="$(find $FILE_PATH -type f -mtime +10 -name "*.sh")"
 while IFS= read -r line
 do 
     echo "Deleting file: $line"
-done <<< ${FILE_TO_DELETE}
+done <<< $FILE_TO_DELETE
 
 
