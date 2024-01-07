@@ -6,7 +6,7 @@ if [ ! -f ${FILE_PATH} ];
 then
     echo "file doesn't exist"
 else 
-    echo "file is in place already"
+    rm ${FILE_PATH}
 fi
 
 
