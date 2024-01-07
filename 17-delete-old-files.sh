@@ -2,7 +2,7 @@
 
 FILE_PATH="/tmp/shell-scripts/"
 
-if [ ! -d ${FILE_PATH} ];
+if [ ! -d ${FILE_PATH} ]
 then
     echo "file doesn't exist"
 fi
