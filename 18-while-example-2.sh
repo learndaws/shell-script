@@ -1,14 +1,9 @@
 #!/bin/bash
 
-INPUT_FILE=$(cat /etc/passwd)
+READ_FILE=$(cat 14-IP-Addresses)
 
-while IFS=':' read -r user_name password user_id group_id GECOS home_dir shell
+while IFS= read -r line
 do 
-    echo "username: $user_name"
-    echo "password: $password" 
-    echo "user-id: $user_id"
-    echo "group-id: $group_id" 
-    echo "GECOS: $GECOS" 
-    echo "home-dir: $home_dir" 
-    echo "shell: $shell"
-done <<< $INPUT_FILE
+    nslookup $line | grep name &>> /tmp/new.log 
+
+done <<< $READ_FILE
