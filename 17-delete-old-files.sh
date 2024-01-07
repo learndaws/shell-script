@@ -14,6 +14,6 @@ do
     echo "Deleting file: $line"
     rm $line
     echo "Deleted file: $line"
-done < $FILE_TO_DELETE
+done <<< $FILE_TO_DELETE
 
 
