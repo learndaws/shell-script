@@ -1,6 +1,6 @@
 #!/bin/bash
 
-INPUT=$(df -hT | grep -vE 'mpfs|File' | awk '{print $6F}' | cut -d % -f1)
+INPUT=$(df -hT | grep -vE 'mpfs|File')
 
 while IFS= read -r line
 do
