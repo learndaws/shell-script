@@ -1,6 +1,7 @@
 #!/bin/bash
 
 INPUT=$(df -hT | grep -vE 'mpfs|File')
+message=""
 
 while IFS= read -r line
 do
