@@ -4,7 +4,7 @@ DISK_USAGE_CHECK=$(df -hT | grep -vE 'mpfs|File' | awk '{print $6F}' | cut -d % 
 
 while IFS= read -r line
 do
-    if [ $DISK_USAGE_CHECK -ge 1 ];
+    if [  $line -ge $DISK_USAGE_CHECK ];
     then
         echo "crossed threshold"
     else
