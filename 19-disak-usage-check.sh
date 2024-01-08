@@ -9,7 +9,5 @@ do
         if [ $usage -ge 1 ];
         then        
             message+="Higher disk usageon $partition: $usage\n"
-        else
-            echo "$line:under threshold"
     fi 
 done <<< $INPUT 
