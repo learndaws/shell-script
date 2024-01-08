@@ -9,5 +9,5 @@ do
         if [ $usage -ge 1 ];
         then        
             message+="Higher disk usageon $partition: $usage\n"
-    fi 
+        fi 
 done <<< $INPUT 
