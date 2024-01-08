@@ -14,4 +14,3 @@ do
         fi 
 done <<< $INPUT 
 
-echo -e "Message: \n$message"
