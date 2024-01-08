@@ -6,8 +6,8 @@ while IFS= read -r line
 do
     if [  $line -le 1 ];
     then
-        echo "crossed threshold"
+        echo "$line:crossed threshold"
     else
-        echo "under threshold"
+        echo "$line:under threshold"
 fi 
 done <<< $DISK_USAGE_CHECK 
