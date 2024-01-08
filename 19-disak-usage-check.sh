@@ -5,7 +5,7 @@ PARTITION_NAME=$(df -hT | grep -vE 'tmpfs|File' | awk '{print $1F}')
 
 while IFS= read -r line
 do
-    if [  $line -le 1 ];
+    if [  $line -ge 1 ];
     then
         echo "$PARTITION_NAME:$line:crossed threshold"
     else
