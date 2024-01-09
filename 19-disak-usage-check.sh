@@ -2,7 +2,7 @@
 
 INPUT=$(df -hT | grep -vE 'mpfs|File')
 DISK_THRESHOLD=1
-message=""
+
 
 while IFS= read -r line
 do
