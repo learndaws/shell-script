@@ -10,9 +10,11 @@ do
     partition=$(echo $line | awk '{print $1F}')
         if [ $usage -ge 1 ];
         then        
-            echo "Higher disk usage on $partition: $usage"
+            message+="Higher disk usage on $partition: $usage"
         fi 
 done <<< $INPUT
+
+echo "$message"
 
 
 
