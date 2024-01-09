@@ -16,7 +16,7 @@ done <<< $INPUT
 
 echo -e "$message"
 
-echo -e "$message" | mail -s "Alert: High CPU Utilization" $1
+echo -e "$message" | mail -s "Alert-1: High CPU Utilization" srinivasachalapathi@gmail.com
 
 
 
