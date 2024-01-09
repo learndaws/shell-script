@@ -11,7 +11,7 @@ FILE_TO_DELETE=$(find $FILE_PATH -type f -mtime +10 -name "*.ja")
 
 while IFS= read -r line
 do 
-    
+    echo "Deleting file: $line"
     rm $line
     echo "Deleted file: $line"
 done <<< $FILE_TO_DELETE
