@@ -12,7 +12,7 @@ do
         then        
             message+="Higher disk usage on $partition: $usage\n"
         fi 
-done <<< $INPUT 
+done <<< $INPUT
 
-echo -e "$message"
+
 
