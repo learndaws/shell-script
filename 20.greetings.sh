@@ -8,7 +8,6 @@ do
     case $opt in
         n) NAME="$OPTARG";;
         W) WISHES="$OPTARG";;
-        h|*) exit;;
     esac
 done
 
