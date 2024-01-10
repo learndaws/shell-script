@@ -15,7 +15,7 @@ do
         n) NAME="$OPTARG";;
         w) WISHES="$OPTARG";;
         h|*) USAGE; exit;;
-        \?) echo "invalid options -"$OPTARG" >&2; exit;;
+        \?) echo "invalid options -"$OPTARG"" >&2; exit;;
     esac
 done
 
