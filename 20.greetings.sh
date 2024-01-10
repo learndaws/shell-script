@@ -19,4 +19,11 @@ do
     esac
 done
 
+if [ -z "$NAME" ] || [ -z $WISHES ];
+    then
+        echo "ERROR: Both -n and -w are mandatory options"
+        USAGE
+        exit1
+fi
+
 echo "Hello $NAME, $WISHES. How are you doing?"
