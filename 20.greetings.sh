@@ -11,3 +11,5 @@ do
         h|*) USAGE; exit;;
     esac
 done
+
+echo "Hello $NAME, $WISHES"
