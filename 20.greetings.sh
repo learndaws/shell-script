@@ -8,8 +8,8 @@ do
     case $opt in
         n) NAME="$OPTARG";;
         W) WISHES="$OPTARG";;
-        h|*) USAGE; exit;;
+        h|*) exit;;
     esac
 done
 
-echo "Hello NAME, WISHES"
+echo "Hello $NAME, $WISHES"
