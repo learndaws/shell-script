@@ -15,7 +15,8 @@ do
         n) NAME="$OPTARG";;
         w) WISHES="$OPTARG";;
         h|*) USAGE; exit;;
+        \?) echo "invalid options"; exit;;
     esac
 done
 
-echo "Hello $NAME, $WISHES"
+echo "Hello $NAME, $WISHES. How are you doing?"
