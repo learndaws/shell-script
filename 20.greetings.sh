@@ -23,7 +23,7 @@ if [ -z "$NAME" ] || [ -z $WISHES ];
     then
         echo "ERROR: Both -n and -w are mandatory options"
         USAGE
-        exit1
+        exit 1
 fi
 
 echo "Hello $NAME, $WISHES. How are you doing?"
