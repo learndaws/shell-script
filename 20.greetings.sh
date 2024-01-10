@@ -1,7 +1,6 @@
 #!/bin/bash
 
-NAME=""
-WISHES=""
+
 
 while getopts ":n:w:h" opt; 
 do 
